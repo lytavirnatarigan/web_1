@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="Pofil.jpeg" alt="Logo Aplikasi" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="transaksi.html">Transaksi</a></li>
+                <li><a href="profil.html">Profil</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!DOCTYPE html>
+        <html lang="id">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Login - Aplikasi Penjualan Barang</title>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <body>
+            <div class="login-container">
+                <form id="loginForm" class="login-form">
+                    <h2>Login</h2>
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                    <p id="errorMessage" class="error-message"></p>
+                    <div class="extra-links">
+                        <a href="forgot-password.html">Lupa Kata Sandi?</a>
+                    <div class="extra-links">
+                        <a href="register.html">Buat Akun Baru</a>
+                    </div>
+                </form>
+            </div>
+            <script src="script.js"></script>
+        </body>
+        </html>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    
+    header {
+        background-color: #3d71ad;
+        color: white;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .logo {
+        max-height: 50px;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+nav ul li a:hover {
+    background-color:#000000;
+    border-radius: 5px;
+}
+
+main {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+form label {
+    margin-bottom: 5px;
+}
+
+form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #3d71ad;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #3d71ad;
+}
+
+footer {
+    background-color: #3d71ad;
+    color: white;
+    text-align: center;
+    padding: 10px 0
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+</style>
+<br>
+<script>
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Mencegah form dari submit default
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const errorMessage = document.getElementById('errorMessage');
+
+    // Validasi sederhana (Anda bisa menambahkan validasi lebih lanjut sesuai kebutuhan)
+    if (username === 'admin' && password === '1234') {
+        // Redirect ke halaman beranda
+        window.location.href = 'index.html';
+    } else {
+        errorMessage.textContent = 'Username atau password salah!';
+    }
+});
+</script>
+</body>
+</html>
